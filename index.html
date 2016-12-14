@@ -36,7 +36,7 @@
         </div>
        
         
-        <iframe id="frame" style="border:2px solid #ccc;display:none;" class="col-xs-12"></iframe>    
+        <iframe id="frame" style="border:2px solid #ccc;display:none;min-height: 550px;" class="col-xs-12 row-fluid"></iframe>    
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -48,7 +48,7 @@
                 var encomenda = $('#encomenda').val();
                 if($.trim(encomenda) != ""){
                    var url = "http://websro.correios.com.br/sro_bin/txect01$.QueryList?P_TIPO=001&P_COD_UNI="+encomenda+"&P_LINGUA=001";
-                   $('#frame').load(url).show();
+                   $('#frame').attr('src', url).show();
                    
                 }
             });
